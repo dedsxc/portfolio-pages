@@ -1,31 +1,19 @@
-# How to Run a Blockchain Node? 🤔
+# How to Run a Blockchain Node in Kubernetes? 🤔
 
-At first glance, running a blockchain node may seem overwhelming, but the process is surprisingly straightforward once broken down. Here’s a step-by-step guide to help you get started.
+Running a blockchain node in Kubernetes can help you achieve scalability, fault tolerance, and ease of management. This guide demonstrates how to deploy a blockchain node using a Kubernetes stack powered by ArgoCD, GitHub, and Helm.
 
+The following tutorial will demonstrate how to deploy an [Ethereum](https://ethereum.org/) blockchain node on kubernetes cluster.
 
-## Understand the mechanism 
+## Pre-requisite
 
-A blockchain node is essentially a computer that participates in the blockchain network by maintaining a copy of the blockchain ledger, validating transactions, and sometimes producing new blocks. Nodes can serve different purposes:
+- Kubernetes Cluster: Ensure you have a running Kubernetes cluster (e.g., managed services like EKS, AKS, GKE, or Minikube for local testing).
+- ArgoCD: Set up ArgoCD for GitOps-based deployment. Install it in your cluster following ArgoCD installation steps.
+- GitHub Repository: Host your Helm chart and application configurations in a GitHub repository.
 
-- **Full Nodes**: Store the entire blockchain and validate transactions.
-- **Light Nodes**: Store only a portion of the blockchain for faster performance.
-- **Validator Nodes**: Participate in consensus mechanisms, such as Proof-of-Stake or Proof-of-Authority.
+## Build & Deploy Ethereum node
 
+The ethereum client node software support many client. We will use [erigon](https://github.com/erigontech/erigon) which design for efficiency, better storage management
 
-## Hardware Requirements 💻
-
-Running a blockchain node requires hardware that can handle the demands of constant communication, computation, and storage. Here’s what you’ll typically need:
-
-- **Processing Power**: A modern CPU, ideally quad-core or higher.
-- **RAM**: At least 8GB (16GB+ recommended for demanding blockchains).
-- **Storage**: Depending on the blockchain, storage needs range from a few gigabytes (light nodes) to terabytes (full nodes like Bitcoin).
-- **Internet Connection**: A stable, high-speed internet connection is essential for syncing the blockchain and communicating with peers.
-
-Some blockchains, like Bitcoin, require terabytes of storage for the entire blockchain! 🤯 
-
-
-## Installation on kubernetes cluster 🚀
-
-For this tutorial, we will install an [Ethereum](https://ethereum.org/en/) node. Ethereum nodes are an excellent starting point as they provide access to a smart contract platform while offering various node types.
-
-To be continued...
+~~~python
+print("hello pretty")
+~~~
